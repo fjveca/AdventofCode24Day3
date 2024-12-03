@@ -24,12 +24,15 @@ func main() {
 				if i+7 < len(line) {
 					if line[i:i+7] == "don't()" {
 						enable = false
+						continue
 					}
 				}
 			} else {
 				if i+4 < len(line) {
 					if line[i:i+4] == "do()" {
 						enable = true
+					} else {
+						continue
 					}
 				}
 			}
